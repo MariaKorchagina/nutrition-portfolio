@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор КЖБУ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">NutriLife</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="tips.html">Советы</a></li>
+                <li><a href="kzhbu.html" class="active">Калькулятор КЖБУ</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <main>
+            <div class="kzhbu-title-wrap">
+                <h1 class="kzhbu-title">Калькулятор КЖБУ</h1>
+            </div>
+            <form id="kzhbu-form">
+        <form id="kzhbu-form">
+            <label>Вес (кг): <input type="number" id="weight" required></label><br>
+            <label>Рост (см): <input type="number" id="height" required></label><br>
+            <label>Возраст: <input type="number" id="age" required></label><br>
+            <label>Пол:
+                <select id="gender">
+                    <option value="male">Мужской</option>
+                    <option value="female">Женский</option>
+                </select>
+            </label><br>
+            <label>Активность:
+                <select id="activity">
+                    <option value="1.2">Минимальная</option>
+                    <option value="1.375">Легкая</option>
+                    <option value="1.55">Средняя</option>
+                    <option value="1.725">Высокая</option>
+                    <option value="1.9">Очень высокая</option>
+                </select>
+            </label><br>
+            <label>Цель:
+                <select id="goal">
+                    <option value="maintain">Поддержание веса</option>
+                    <option value="lose">Похудение</option>
+                    <option value="gain">Набор массы</option>
+                </select>
+            </label><br>
+            <button type="submit">Рассчитать</button>
+        </form>
+        <div id="result"></div>
+    </main>
+    <footer>
+        <p>&copy; 2025 NutriLife. Все права защищены.</p>
+    </footer>
+    <script src="kzhbu.js"></script>
+</body>
+</html>

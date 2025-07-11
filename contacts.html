@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">NutriLife</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="tips.html">Советы</a></li>
+                <li><a href="kzhbu.html">Калькулятор КЖБУ</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+                <li><a href="contacts.html" class="active">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="contacts-info">
+            <p>Если у вас есть вопросы или предложения, заполните форму ниже:</p>
+            <form id="contact-form">
+                <label>Имя:<br><input type="text" id="name" required></label><br>
+                <label>Email:<br><input type="email" id="email" required></label><br>
+                <label>Сообщение:<br><textarea id="message" rows="4" required></textarea></label><br>
+                <button type="submit">Отправить</button>
+            </form>
+            <div id="contact-result" style="display:none;margin-top:1em;"></div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 NutriLife. Все права защищены.</p>
+    </footer>
+    <script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        document.getElementById('contact-result').style.display = 'block';
+        document.getElementById('contact-result').innerHTML = 'Спасибо за обращение! Мы свяжемся с вами в ближайшее время.';
+        this.reset();
+    });
+    </script>
+</body>
+</html>
